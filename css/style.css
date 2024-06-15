@@ -1,0 +1,467 @@
+input,
+select {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 30px;
+  color: #1f222c;
+  font-family: "Roboto Slab";
+  text-align: center;
+}
+
+.wrapper {
+  margin: auto;
+  width: 83%;
+}
+
+h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  font-family: "Roboto";
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dcdcde;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+  max-height: 300px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
+  border: 1px solid #3e6aff;
+}
+
+.textbox,
+.name,
+.mail,
+.city,
+.comment,
+.table-form input:not([type=radio]),
+select {
+  max-width: 330px;
+  display: inline-block;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 10px;
+}
+
+
+.textbox textarea {
+  width: 303px;
+}
+
+
+
+.textbox [type=submit] {
+  border: none;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  min-width: 327px;
+  border-radius: 3px;
+  background-color: #12d661;
+}
+
+.delivery,
+.news div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.info input[type="checkbox"] {
+  margin-bottom: 20px;
+}
+
+
+
+.news {
+  width: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  border: 2px solid #e5e5e5;
+}
+
+.news table {
+  width: 100%;
+}
+
+.news th {
+  color: #b3b3b3;
+  text-align: left;
+}
+
+.news th p {
+  padding: 15px;
+  margin: 0;
+}
+
+.news div {
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.news tr:last-child td,
+.news tr:last-child th{
+  padding-bottom: 15px;
+}
+
+[type=date] {
+  min-width: 150px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/calendar.png);
+
+  
+}
+
+.left-part p {
+  margin: 0;
+}
+
+.boy,
+.woman{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.boy input,
+.woman input {
+  appearance: none;
+  width: 71px;
+  height: 70px;
+  border: none;
+  background-image: url(../img/sprite1.png);
+}
+
+.boy input {
+  background-position: 0 0;
+}
+
+.woman input {
+  background-position: -72px 0;
+}
+
+.boy input:checked{
+  background-position: 1px -72px;
+}
+
+.woman input:checked {
+  background-position: -72px 72px;
+}
+
+
+
+form.everydaylife {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.receive-news,
+.buy-home,
+.light{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.everydaylife input[type=checkbox] {
+  display: none;
+
+}
+
+.everydaylife input[type=checkbox]+label {
+  display: inline-block;
+  padding: 10px;
+  padding-left: 55px;
+  position: relative;
+}
+
+.everydaylife input[type=checkbox]+label:before,
+.everydaylife input[type=checkbox]+label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+
+}
+
+.everydaylife input[type=checkbox]+label:before {
+  top: 0;
+  width: 45px;
+  height: 25px;
+  background-color: #cfcfd1;
+  border-radius: 50px;
+
+}
+
+.everydaylife input[type=checkbox]+label:after {
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 50%;
+
+}
+
+.everydaylife input[type=checkbox]:checked+label:before {
+  background-color: #3e6aff;
+}
+
+.everydaylife input[type=checkbox]:checked+label:after {
+  left: 23px;
+}
+
+
+
+
+.left-part {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+
+}
+
+.post_office input[type="radio"] {
+  margin-bottom: 20px;
+}
+
+label.new {
+  color: #b3b3b3;
+}
+
+
+.table-form  {
+  display: inline-block;
+  max-width: 300px;
+  width: 100%;
+}
+
+.table-form input {
+  margin-bottom: 10px;
+}
+
+.table-form textarea {
+  width: 326px;
+}
+
+.table-form[type=submit] {
+  width: 330px;
+  border-radius: 3px;
+  background-color: #12d661;
+}
+
+
+/* Table */
+table {
+  width: 60%;
+  border-collapse: collapse;
+}
+
+.table-form {
+  margin-bottom: 14px;
+}
+
+
+
+
+.table-form input[type=file] {
+  display: none;
+  margin-bottom: 10px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.table-form input {
+  padding-bottom: 31px;
+}
+
+[type=file]+label {
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  background-color: #3e6aff;
+  color: white;
+}
+
+
+
+.table-form [type=submit] {
+  width: 100%;
+  color: white;
+  border-radius: 1px;
+  border: none;
+  background-color: #12d661;
+
+}
+
+/* Table 2 */
+
+.design label input:not([type=checkbox]) {
+
+  display: inline-block;
+  width: 100%;
+  padding: 13px;
+
+
+}
+
+.design td {
+  color: #b3b3b3;
+  padding-left: 9px;
+}
+
+.indonesia select {
+appearance: none;
+position: relative;
+z-index: 2;
+background: transparent;
+}
+
+.select {
+  position: relative;
+}
+
+.select:before {
+  content: "";
+  position: absolute;
+  top: 38px ;
+  right: 14px;
+  z-index: 1;
+  border: 5px solid transparent;
+  border-top-color:black ;
+}
+
+.select:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 19px;
+    top: 29px ;
+    right: 29px;
+    background-color: #ccc;
+    
+}
+
+
+td.rules {
+  color: #1f222c;
+}
+
+.exit[type=submit] {
+
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid #85868d;
+  background-color: #12d661;
+}
+
+.button-line {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.button-line button {
+  border-radius: 1px;
+  border: none;
+  color: #fff;
+  background-color: #85868d;
+}
+
+.button-line label [type=submit] {
+  color: #fff;
+  background-color: #07be51;
+}
+
+/* fixed form */
+.fixed {
+  position: fixed;
+  top: 175px;
+  right: 100px;
+  width: 310px;
+}
+
+.fixed >div {
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+}
+
+.fixed input[type=text] {
+  display: inline-block;
+  width: 85%;
+  padding: 13px;
+  margin-bottom: 10px;
+}
+
+.fixed input[type=password] {
+  display: inline-block;
+  width: 86%;
+  padding: 13px;
+  margin-bottom: 10px;
+}
+
+
+.login {
+  color: #b3b3b3;
+  margin-right: 23px;
+}
+
+.passw {
+  color: #3e6aff;
+  font-size: 13px;
+  margin-right: 10px;
+
+}
+
+.fixed [type=submit] {
+  width: 100%;
+  height: 43px;
+  border: none;
+  color: white;
+  background-color: #12d661;
+}
