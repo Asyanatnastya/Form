@@ -58,7 +58,6 @@ textarea:focus {
 .name,
 .mail,
 .city,
-.comment,
 .table-form input:not([type=radio]),
 select {
   max-width: 330px;
@@ -68,6 +67,21 @@ select {
   margin-bottom: 10px;
 }
 
+.comment{
+  max-width: 330px;
+  display: inline-block;
+  width: 300px;
+  padding: 13px;
+  margin-bottom: 10px;
+}
+
+/* .textbox{
+  max-width: 330px;
+  display: inline-block;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 10px;
+} */
 
 .textbox textarea {
   width: 303px;
@@ -107,7 +121,9 @@ select {
   border-radius: 3px;
   background-color: #f7f7f7;
   border: 2px solid #e5e5e5;
+  margin-bottom: 40px;
 }
+
 
 .news table {
   width: 100%;
@@ -152,38 +168,127 @@ select {
   margin: 0;
 }
 
-.boy,
-.woman{
+.title{
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  font-weight: 700;
+}
+
+
+.style {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  column-gap: 30%;
 }
 
-.boy input,
-.woman input {
-  appearance: none;
-  width: 71px;
+.gender-photo p {
+  position: relative;
+  padding: 30px; 
+}
+
+.gender-photo input[type="radio"] {
+  visibility: hidden;
+}
+
+.gender-photo label {
+  padding: 0 35px;
+}
+
+.gender-photo label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 70px;
   height: 70px;
-  border: none;
-  background-image: url(../img/sprite1.png);
+  background: url("../img/gender.png") no-repeat;
+  background-position: 0 0;
+  background-color: #fff;
+  border: 1px #ccc solid;
+  border-radius: 50%;
 }
 
-.boy input {
+.gender-photo label::after {
+  background: url("../img/gender.png") no-repeat;
+}
+
+.gender-photo [type="radio"]:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+p.male label::before {
   background-position: 0 0;
 }
 
-.woman input {
-  background-position: -72px 0;
+p.male label::after {
+  background-position: -72px 0;  
 }
 
-.boy input:checked{
-  background-position: 1px -72px;
+p.female label::before {
+  background-position: 0 -73px;
 }
 
-.woman input:checked {
-  background-position: -72px 72px;
+p.female label::after {
+  background-position: -73px -73px;
 }
 
+
+.move-checkbox p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 5px;
+  
+}
+
+.move-checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.move-checkbox input[type="checkbox"]+label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 45px;
+  height: 25px;
+  background-color: #cfcfd1;
+  border: 1px #cfcfd1 solid;
+  border-radius: 50px;
+}
+
+.move-checkbox input[type="checkbox"]+label::after {
+  content: "";
+  position: absolute;
+  top: 5.5px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.move-checkbox input[type="checkbox"]:checked+label::before{
+  background-color: #3e6aff;
+}
+
+.move-checkbox input[type="checkbox"]:checked+label::after{
+  position: absolute;
+  left: 24px;
+}
+
+.move-checkbox label {
+  margin-left: 40px;
+}
 
 
 form.everydaylife {
@@ -250,13 +355,66 @@ form.everydaylife {
   left: 23px;
 }
 
+input[type="radio"], input[type="checkbox"] {
+  margin: 7px;
+}
 
+.registration td {
+  padding-right: 37px;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+/* textarea {
+  margin-bottom: 10px; 
+  width: 323px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+} */
+
+.radios input {
+  visibility: hidden;
+}
+.radios {
+  position: relative;
+}
+
+.radios label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 1px #ccc solid;
+  border-radius: 50%;
+}
+
+.radios input:checked+label::before {
+  background-color: #fff;
+  border-color: #3e6aff;
+}
+
+
+.radios input:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 10.5px;
+  left: 4.5px;
+  width: 7px;
+  height: 8px;
+  background-color: #3e6aff;
+  border-radius: 50%;
+}
 
 
 .left-part {
   display: flex;
   justify-content: space-between;
   width: 40%;
+  padding-bottom: 25px;
 
 }
 
@@ -279,9 +437,9 @@ label.new {
   margin-bottom: 10px;
 }
 
-.table-form textarea {
+/* .table-form textarea {
   width: 326px;
-}
+} */
 
 .table-form[type=submit] {
   width: 330px;
@@ -323,6 +481,7 @@ label {
   border-radius: 3px;
   background-color: #3e6aff;
   color: white;
+  margin: 10px;
 }
 
 
@@ -339,17 +498,31 @@ label {
 /* Table 2 */
 
 .design label input:not([type=checkbox]) {
-
   display: inline-block;
   width: 100%;
   padding: 13px;
 
 
 }
+.registration {
+  padding-right: 50px;
+  padding-bottom: 10px;
+  color: #000;
+
+}
+.gender {
+  display: inline-block;
+}
+
+td .radios {
+  margin-right: 25px;
+  width: max-content;
+}
 
 .design td {
   color: #b3b3b3;
   padding-left: 9px;
+  padding-bottom: 20px;
 }
 
 .indonesia select {
@@ -357,6 +530,7 @@ appearance: none;
 position: relative;
 z-index: 2;
 background: transparent;
+margin: 0;
 }
 
 .select {
@@ -420,7 +594,7 @@ td.rules {
   position: fixed;
   top: 175px;
   right: 100px;
-  width: 310px;
+  width: 370px;
 }
 
 .fixed >div {
@@ -456,6 +630,10 @@ td.rules {
   font-size: 13px;
   margin-right: 10px;
 
+}
+
+.enter{
+  padding-top: 15px;
 }
 
 .fixed [type=submit] {

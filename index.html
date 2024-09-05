@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форми</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -36,7 +34,7 @@
                     placeholder="Email"></textarea>
             </label>
             <label>
-                <input type="submit" value="Зареєструватися">
+                <input type="submit" name="Sign-up" value="Зареєструватися">
             </label>
         </form>
         <hr>
@@ -116,43 +114,30 @@
             </div>
         </form>
         <hr>
-
-
-
-        <h2>03. стилізовані чекбокси </h2>
         <form action="#" method="POST">
-            <div>
-                <p class="boy">
-                    <input type="checkbox" name="boy" id="boy">
-                    <label for="boy">Чоловік</label>
-
-                </p>
-
-                <p class="woman">
-                    <input type="checkbox" name="girls" id="girls">
-                    <label for="girls">Жінка</label>
-                </p>
+            <p class="title"> 03. стилізовані чекбокси </p>
+            <div class="style">
+                <div class="gender-photo">
+                    <p class="male"><input type="radio" name="gender" value="male" id="male"><label
+                            for="male">Чоловік</label></p>
+                    <p class="female"><input type="radio" name="gender" value="female" id="female"><label
+                            for="female">Жінка</label></p>
+                </div>
+                <div class="move-checkbox" style="padding-top: 30px;">
+                    <p><input type="checkbox" name="get_news" value="get_news" id="get_news"><label
+                            for="get_news">Отримувати новини</label></p>
+                    <p><input type="checkbox" name="buy-sausage" value="sausage" id="buy-sausage"><label
+                            for="buy-sausage">Купити додому ковбаси</label></p>
+                    <p><input type="checkbox" name="light" value="turn_on_light" id="turn_on_light"><label
+                            for="turn_on_light">Включити світло</label></p>
+                </div>
             </div>
-            </form>
-            <form action="#" method="POST" class="everydaylife">
-                <p class="receive-news">
-                    <input type="checkbox" id="everydaylife">
-                    <label for="everydaylife">Отримувати новини</label>
-                </p>
-                <p class="buy-home">
-                    <input type="checkbox" id="buy">
-                    <label for="buy">Купити додому ковбаси</label>
-                </p>
-                <p class="light">
-                    <input type="checkbox" id="light">
-                    <label for="light">Включити світло</label>
-                </p>
-            </form>
+        </form>
         <hr>
         <h2>04. форма таблицею</h2>
         <form action="#" method="POST" class="table-form">
             <p><b>Заповніть усі необхідні поля</b></p>
-            <table>
+            <table class="registration">
                 <tr>
                     <td><label for="firstname">ФІО:</label></td>
                     <td><input id="firstname" type="text" placeholder="Введіть ім’я"></td>
@@ -171,9 +156,10 @@
 
                 </tr>
                 <tr>
-                    <td><label for="gender">Стать:</label></td>
-                    <td><input id="gender" type="radio">Чоловік
-                        <label><input type="radio">Жінка</label>
+                    <td><label>Стать:</label></td>
+                    <td>
+                        <p class="gender radios"><input type="radio" name="gender" value="man" id="man"><label for="man">Чоловік</label></p>
+                        <p class="gender radios"><input type="radio" name="gender" value="woman" id="woman"><label for="woman">Жінка</label></p>
                     </td>
                 </tr>
 
@@ -184,54 +170,57 @@
                         <input type="file" name="file" id="file">
                         <label for="file">Вибрати файл</label>
                     </td>
-
                 </tr>
-
-
-
-
                 </tr>
-                <td><label for="text">Коментарій:</label></td>
-                <td><label>
-                        <textarea name="text" id="text" cols="30" rows="10" maxlength="30"
-                            placeholder="Введіть текст повідомлення"></textarea>
-                    </label>
-                    <label>
-                        <input type="submit" value="Зареєструватися">
-                    </label>
+                <tr>
+                    <td>
+                        <label for="name">Коментарій:</label>
+                    </td>
+                    <td>
+                        <textarea class="comment" name="email" id="email" cols="10" rows="6" maxlength="20"
+                        placeholder="Введіть текст повідомлення"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="Sign-up" value="Зареєструватися">
+                    </td>
+                </tr>
                 </td>
-
                 </tr>
                 </tr>
-
-            </table>
-            <hr>
-
-
+            </table>    
         </form>
+        <div>
+            <hr>
+        </div>
+
         <h2>05. форма таблицею</h2>
         <form action="#" method="POST" class="design">
             <table class="info">
                 <tr>
                     <p><b>Оформлення заявки</b></p>
                 </tr>
-
                 <tr>
-
+                    
                     <td><label>Прізвище та ім’я<input type="text"></label></td>
                     <td><label>Ел. пошта<input type="email"></label></td>
                     <td><label>Телефон<input type="tel"></label></td>
                 </tr>
-
-
+                <tr>
+                <td colspan="3">
+                        <hr>
+                    </td>
+                </tr>
                 <tr>
                     <td class="indonesia"><label class="select">Країна: <select name="indonesia" id="counr">
                         <option value="indonesia">Індонезія</option>
                     </select>
-                    </label></td>
-                    <td colspan="2">
-                        <label>Адреса:<input type="text"></label>
-                    </td>
+                </label></td>
+                <td colspan="2">
+                    <label>Адреса:<input type="text"></label>
+                </td>
 
 
                 </tr>
@@ -241,12 +230,12 @@
                     <td><label>Поштовий індекс<input type="number"></label></td>
                 </tr>
                 <tr>
-                    <td class="rules">
-                        <label><input type="checkbox">Я погоджуюсь з правилами оплати та доставки товару</label>
-                    </td>
                 </tr>
             </table>
-
+            <td class="rules">
+                <label><input type="checkbox">Я погоджуюсь з правилами оплати та доставки товару</label>
+            </td>
+            
             <hr>
             <div class="button-line">
                 <button>Повернутися назад</button>
@@ -257,17 +246,19 @@
 
             </div>
         </form>
- 
+
 
         <form action="#" method="POST" class="fixed">
             <h2>06. фіксована форма</h2>
 
             <div>
                 <label for="text">
-                    <p class="login">Логін:</label></p>
+                    <p class="login">Логін:
+                </label></p>
                 <label><input type="text"></label>
                 <label for="passw">
-                    <p class="login">Пароль:</label></p>
+                    <p class="login">Пароль:
+                </label></p>
                 <label><input type="password"></label>
                 <p class="passw"><a href="#">Забули пароль?</a></p>
                 <label><input type="checkbox">Запам’ятати пароль</label>
